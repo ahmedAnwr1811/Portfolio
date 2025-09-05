@@ -1,430 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Anwar - Portfolio</title>
-    <style>
-   /* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
-    line-height: 1.7;
-}
-
-/* Header Styles */
-header {
-    background: linear-gradient(135deg, #2c2c2c, #5b21b6);
-    color: #ffffff;
-    text-align: center;
-    padding: 4rem 1rem;
-}
-
-.profile-photo {
-    width: 250px;
-    height: 250px;
-    border: 4px solid #a78bfa;
-    margin-bottom: 1rem;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 0.5rem;
-}
-
-header p {
-    font-size: 1.3rem;
-    opacity: 0.85;
-}
-
-/* Navigation Bar */
-nav {
-    background-color: #252525;
-    padding: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 1.5rem;
-}
-
-nav ul li a {
-    color: #d1d5db;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #a78bfa;
-}
-
-/* Section Styles */
-section {
-    padding: 3rem 1rem;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-section h2 {
-    color: #a78bfa;
-    font-size: 2.2rem;
-    margin-bottom: 1.5rem;
-    border-bottom: 3px solid #5b21b6;
-    display: inline-block;
-}
-
-.card {
-    background-color: #2d2d2d;
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-/* Project Card Styles */
-.project-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-.project-card img {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.project-card .content {
-    flex: 1;
-}
-
-/* Small Button for Try It Here */
-.try-button {
-    display: inline-block;
-    padding: 0.2rem 0.5rem; /* Minimal padding */
-    font-size: 0.7rem;      /* Small text */
-    font-weight: 500;
-    color: #ffffff;
-    background: linear-gradient(135deg, #5b21b6, #9333ea);
-    border: none;
-    border-radius: 4px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.try-button:hover {
-    background: linear-gradient(135deg, #9333ea, #c084fc);
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.try-button:active {
-    transform: translateY(0px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.try-button:focus {
-    outline: 1px solid #a78bfa;
-    outline-offset: 2px;
-}
-
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-}
-
-/* Footer */
-footer {
-    background-color: #252525;
-    color: #d1d5db;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-}
-
-footer a {
-    color: #a78bfa;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2.2rem;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmed Anwar - Portfolio</title>
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
-    header p {
-        font-size: 1.1rem;
+    body {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #2c2c2c, #5b21b6);
+      color: #ffffff;
+      text-align: center;
+      padding: 4rem 1rem;
     }
 
     .profile-photo {
-        width: 120px;
-        height: 120px;
+      width: 250px;
+      height: 250px;
+      border: 4px solid #a78bfa;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.85;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #252525;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     nav ul {
-        flex-direction: column;
-        align-items: center;
+      display: flex;
+      justify-content: center;
+      list-style: none;
     }
 
     nav ul li {
-        margin: 0.75rem 0;
+      margin: 0 1.5rem;
     }
 
+    nav ul li a {
+      color: #d1d5db;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #a78bfa;
+    }
+
+    /* Sections */
     section {
-        padding: 2.5rem 1.5rem;
+      padding: 3rem 1rem;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
+    section h2 {
+      color: #a78bfa;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 3px solid #5b21b6;
+      display: inline-block;
+    }
+
+    .card {
+      background-color: #2d2d2d;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Projects */
     .project-card {
-        flex-direction: column;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
     }
 
     .project-card img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .project-card .content {
+      flex: 1;
+    }
+
+    /* Small Buttons */
+    .try-button {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+      color: #ffffff;
+      background: linear-gradient(135deg, #5b21b6, #9333ea);
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      margin-top: 0.5rem;
+      display: inline-block;
+    }
+
+    .try-button:hover {
+      background: linear-gradient(135deg, #9333ea, #c084fc);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #252525;
+      color: #d1d5db;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #a78bfa;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1.1rem;
+      }
+
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul li {
+        margin: 0.75rem 0;
+      }
+
+      .project-card {
+        flex-direction: column;
+      }
+
+      .project-card img {
         width: 100%;
         height: auto;
+      }
     }
-}
-
-</style>
+  </style>
 </head>
 <body>
-    <header>
-        <img src="./assets/profileAnwarPhoto.jpeg" alt="Ahmed Anwar Profile Photo" class="profile-photo">
-        <h1>Ahmed Anwar</h1>
-        <p>Computer Science & AI Student | Passionate about Machine Learning and Web Development</p>
-    </header>
+  <header>
+    <img src="./assets/profileAnwarPhoto.jpeg" alt="Ahmed Anwar Profile Photo" class="profile-photo">
+    <h1>Ahmed Anwar</h1>
+    <p>Computer Science & AI Student | Passionate about Machine Learning and Web Development</p>
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="card">
-            <p>Motivated final-year Computer Science student majoring in Artificial Intelligence at The British University in Egypt. I am passionate about leveraging my skills in Python, machine learning, and web development to solve real-world problems. Actively seeking opportunities in AI, backend development, or data science roles.</p>
-        </div>
-    </section>
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>Motivated final-year Computer Science student majoring in Artificial Intelligence at The British University in Egypt. Passionate about leveraging my skills in Python, machine learning, and web development to solve real-world problems.</p>
+    </div>
+  </section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-        <div class="card">
-            <h3>The British University in Egypt</h3>
-            <p>BSc in Computer Science - Major: Artificial Intelligence</p>
-            <p>2021 - Present | Year 4</p>
-            <ul>
-                <li>Relevant coursework: Machine Learning, Deep Learning, Data Analysis, Web Development</li>
-                <li>Activities: Programming Club, University Volunteering</li>
-            </ul>
-        </div>
-    </section>
+  <!-- Education -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="card">
+      <h3>The British University in Egypt</h3>
+      <p>BSc in Computer Science - Major: Artificial Intelligence</p>
+      <p>2021 - Present | Year 4</p>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="card">
-            <h3>Laravel Developer Intern</h3>
-            <p>World Urban Forum (WUF12) - Cairo, Egypt</p>
-            <ul>
-                <li>Developed web applications using Django framework</li>
-                <li>Collaborated with a team to build and maintain dynamic features</li>
-                <li>Participated in IT operations during the international WUF event</li>
-            </ul>
-        </div>
-    </section>
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>Laravel Developer Intern</h3>
+      <p>World Urban Forum (WUF12) - Cairo, Egypt</p>
+      <ul>
+        <li>Developed web applications using Django framework</li>
+        <li>Collaborated with a team to build and maintain dynamic features</li>
+        <li>Participated in IT operations during the international WUF event</li>
+      </ul>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
+  <!-- Projects -->
+  <section id="projects">
     <h2>Projects</h2>
 
     <div class="card project-card">
-        <img src="./assets/cv_analyzer.jpg" alt="AI CV Analyzer">
-        <div class="content">
-            <h3>AI CV Analyzer & Job Fit Scorer</h3>
-            <p>An NLP-powered tool (with LangChain) that parses resumes, extracts skills/experience, matches them to a job description, and scores the fit with actionable improvement tips.</p>
-        </div>
+      <img src="./assets/cv_analyzer.jpg" alt="AI CV Analyzer">
+      <div class="content">
+        <h3>AI CV Analyzer & Job Fit Scorer</h3>
+        <p>An NLP-powered tool (with LangChain) that parses resumes and matches them to job descriptions.</p>
+        <a href="#" class="try-button">Try It Here</a>
+      </div>
     </div>
 
     <div class="card project-card">
-        <img src="./assets/vit_food.jpg" alt="Vision Transformer Image Classification">
-        <div class="content">
-            <h3>Vision Transformer (ViT) Image Classification</h3>
-            <p>Fine-tuned a pretrained Vision Transformer (ViT) on the Indian Food Images dataset (19 categories) with an end-to-end pipeline (augmentations, preprocessing).</p>
-        </div>
-    </div>
-
- <div class="card project-card">
-    <img src="./assets/csv_query.jpg" alt="CSV Query Assistant">
-    <div class="content">
-        <h3>CSV Query Assistant (Streamlit + Groq)</h3>
-        <p>
-            Built a Streamlit app for natural-language analysis of CSVs; uses Groq to empower teams with self-serve data exploration. 
-            <a href="https://huggingface.co/spaces/anwaritos/Data-Analyzer" class="try-button" target="_blank">Try It Here</a>.
-        </p>
-    </div>
-</div>
-
-<div class="card project-card">
-    <img src="./assets/document_qa.jpg" alt="Intelligent Document Question Answering">
-    <div class="content">
-        <h3>Intelligent Document QA with RAG & Memory</h3>
-        <p>
-            Built an AI assistant for PDF document analysis using a Retrieval-Augmented Generation (RAG) pipeline. 
-            <a href="https://huggingface.co/spaces/anwaritos/Intelligent_Document_Question_Answering_with_RAG_and_Memory" class="try-button" target="_blank">Try It Here</a>.
-        </p>
-    </div>
-</div>
-    
-    <div class="card project-card">
-        <img src="./assets/xray.jpg" alt="Pneumonia Classification">
-        <div class="content">
-            <h3>Pneumonia Classification using Vision Transformer</h3>
-            <p>Fine-tuned a Vision Transformer (ViT) model to classify chest X-ray images as Normal or Pneumonia, achieving 95% accuracy using the Chest X-ray dataset.</p>
-        </div>
+      <img src="./assets/vit_food.jpg" alt="Vision Transformer Image Classification">
+      <div class="content">
+        <h3>Vision Transformer (ViT) Image Classification</h3>
+        <p>Fine-tuned a pretrained Vision Transformer on the Indian Food Images dataset (19 categories).</p>
+        <a href="#" class="try-button">Try It Here</a>
+      </div>
     </div>
 
     <div class="card project-card">
-        <img src="./assets/summaryMedical.jpg" alt="Medical Summarization">
-        <div class="content">
-            <h3>Medical Research Paper Summarization</h3>
-            <p>Fine-tuned a large language model using LangChain and LoRA to summarize medical research papers, enhancing efficiency in literature reviews.</p>
-        </div>
+      <img src="./assets/csv_query.jpg" alt="CSV Query Assistant">
+      <div class="content">
+        <h3>CSV Query Assistant</h3>
+        <p>Streamlit app for natural-language analysis of CSVs using Groq.</p>
+        <a href="https://huggingface.co/spaces/anwaritos/Data-Analyzer" class="try-button" target="_blank">Try It Here</a>
+      </div>
     </div>
 
     <div class="card project-card">
-        <img src="./assets/travel.jpg" alt="Travel Planner">
-        <div class="content">
-            <h3>Travel Planner AI Agents</h3>
-            <p>Developed a travel planning system using CrewAI, integrating agents like Travel Advisor, Flight Specialist, and Budget Planner to create personalized itineraries.</p>
-        </div>
+      <img src="./assets/document_qa.jpg" alt="Intelligent Document QA">
+      <div class="content">
+        <h3>Document QA with RAG & Memory</h3>
+        <p>AI assistant for PDF document analysis using a RAG pipeline.</p>
+        <a href="https://huggingface.co/spaces/anwaritos/Intelligent_Document_Question_Answering_with_RAG_and_Memory" class="try-button" target="_blank">Try It Here</a>
+      </div>
     </div>
 
     <div class="card project-card">
-        <img src="./assets/bitcoin.jpg" alt="Bitcoin Prediction">
-        <div class="content">
-            <h3>Bitcoin Price Prediction</h3>
-            <p>Built an LSTM-CNN hybrid model with TensorFlow for daily Bitcoin price forecasting, integrated into a Django-based web application.</p>
-        </div>
+      <img src="./assets/xray.jpg" alt="Pneumonia Classification">
+      <div class="content">
+        <h3>Pneumonia Classification</h3>
+        <p>Fine-tuned a Vision Transformer to classify chest X-ray images with 95% accuracy.</p>
+        <a href="#" class="try-button">Try It Here</a>
+      </div>
     </div>
 
     <div class="card project-card">
-        <img src="./assets/food.jpg" alt="Food Classification">
-        <div class="content">
-            <h3>Food Classification</h3>
-            <p>Developed a CNN model with TensorFlow to classify food images (Pizza vs. Steak) with high accuracy.</p>
-        </div>
+      <img src="./assets/summaryMedical.jpg" alt="Medical Summarization">
+      <div class="content">
+        <h3>Medical Research Paper Summarization</h3>
+        <p>Fine-tuned a large language model with LoRA to summarize research papers.</p>
+        <a href="#" class="try-button">Try It Here</a>
+      </div>
     </div>
-</section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="card">
-                <h3>Languages & Frameworks</h3>
-                <ul>
-                    <li>Python</li>
-                    <li>JavaScript</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Java</li>
-                    <li>C++</li>
-                    <li>Django</li>
-                    <li>Laravel</li>
-                    <li>LangChain</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Libraries & Tools</h3>
-                <ul>
-                    <li>TensorFlow</li>
-                    <li>Keras</li>
-                    <li>Pandas</li>
-                    <li>NumPy</li>
-                    <li>CrewAI</li>
-                    <li>PyTorch</li>
-                    <li>Git</li>
-                    <li>REST APIs</li>
-                    <li>Google Colab</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Soft Skills</h3>
-                <ul>
-                    <li>Team Collaboration</li>
-                    <li>Communication</li>
-                    <li>Self-Learning</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <div class="card project-card">
+      <img src="./assets/travel.jpg" alt="Travel Planner">
+      <div class="content">
+        <h3>Travel Planner AI Agents</h3>
+        <p>Developed a travel planning system using CrewAI with multiple agents.</p>
+        <a href="#" class="try-button">Try It Here</a>
+      </div>
+    </div>
 
-    <!-- Certifications Section -->
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="card">
-            <ul>
-                <li>Machine Learning - Udemy</li>
-                <li>Deep Learning with TensorFlow - Udemy</li>
-                <li>Django Web Development - Udemy</li>
-                <li>Data Analysis - Udemy</li>
-            </ul>
-        </div>
-    </section>
+    <div class="card project-card">
+      <img src="./assets/bitcoin.jpg" alt="Bitcoin Prediction">
+      <div class="content">
+        <h3>Bitcoin Price Prediction</h3>
+        <p>Built an LSTM-CNN hybrid model for daily Bitcoin price forecasting.</p>
+        <a href="#" class="try-button">Try It Here</a>
+      </div>
+    </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <div class="card">
-            <p>Email: <a href="mailto:ahmed.anwer1164@icloud.com">ahmed.anwer1164@icloud.com</a></p>
-            <p>Phone: 01113451761</p>
-            <p>Location: Cairo, Egypt</p>
-        </div>
-    </section>
+    <div class="card project-card">
+      <img src="./assets/food.jpg" alt="Food Classification">
+      <div class="content">
+        <h3>Food Classification</h3>
+        <p>Developed a CNN model with TensorFlow to classify food images (Pizza vs Steak).</p>
+        <a href="#" class="try-button">Try It Here</a>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>© 2025 Ahmed Anwar. All rights reserved.</p>
-    </footer>
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Languages & Frameworks</h3>
+        <ul>
+          <li>Python</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Java</li>
+          <li>C++</li><li>Django</li><li>Laravel</li><li>LangChain</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Libraries & Tools</h3>
+        <ul>
+          <li>TensorFlow</li><li>Keras</li><li>Pandas</li><li>NumPy</li>
+          <li>CrewAI</li><li>PyTorch</li><li>Git</li><li>REST APIs</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Team Collaboration</li><li>Communication</li><li>Self-Learning</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="card">
+      <ul>
+        <li>Machine Learning - Udemy</li>
+        <li>Deep Learning with TensorFlow - Udemy</li>
+        <li>Django Web Development - Udemy</li>
+        <li>Data Analysis - Udemy</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:ahmed.anwer1164@icloud.com">ahmed.anwer1164@icloud.com</a></p>
+      <p>Phone: 01113451761</p>
+      <p>Location: Cairo, Egypt</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ahmed Anwar. All rights reserved.</p>
+  </footer>
 </body>
 </html>
