@@ -123,15 +123,14 @@ section h2 {
 /* Button for Try It Here */
 .try-button {
     display: inline-block;
-    margin-top: 1rem;
-    padding: 0.8rem 1.5rem;
-    font-size: 1rem;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #ffffff;
     background: linear-gradient(135deg, #5b21b6, #9333ea);
     border: none;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-decoration: none;
     text-align: center;
     transition: all 0.3s ease;
@@ -146,8 +145,14 @@ section h2 {
 
 .try-button:active {
     transform: translateY(2px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+.try-button:focus {
+    outline: 3px solid #a78bfa;
+    outline-offset: 4px;
+}
+
 
 /* Skills Grid */
 .skills-grid {
@@ -319,21 +324,27 @@ footer a:hover {
         </div>
     </div>
 
-    <div class="card project-card">
-        <img src="./assets/csv_query.jpg" alt="CSV Query Assistant">
-        <div class="content">
-            <h3>CSV Query Assistant (Streamlit + Groq)</h3>
-            <p>Built a Streamlit app for natural-language analysis of CSVs; uses Groq to empower teams with self-serve data exploration. <a href="https://huggingface.co/spaces/anwaritos/Data-Analyzer" class="try-button" target="_blank">Try It Here</a>.</p>
-        </div>
+ <div class="card project-card">
+    <img src="./assets/csv_query.jpg" alt="CSV Query Assistant">
+    <div class="content">
+        <h3>CSV Query Assistant (Streamlit + Groq)</h3>
+        <p>
+            Built a Streamlit app for natural-language analysis of CSVs; uses Groq to empower teams with self-serve data exploration. 
+            <a href="https://huggingface.co/spaces/anwaritos/Data-Analyzer" class="try-button" target="_blank">Try It Here</a>.
+        </p>
     </div>
+</div>
 
-    <div class="card project-card">
-        <img src="./assets/document_qa.jpg" alt="Intelligent Document Question Answering">
-        <div class="content">
-            <h3>Intelligent Document QA with RAG & Memory</h3>
-            <p>Built an AI assistant for PDF document analysis using a Retrieval-Augmented Generation (RAG) pipeline. <a href="https://huggingface.co/spaces/anwaritos/Intelligent_Document_Question_Answering_with_RAG_and_Memory" class="try-button" target="_blank">Try It Here</a>.</p>
-        </div>
+<div class="card project-card">
+    <img src="./assets/document_qa.jpg" alt="Intelligent Document Question Answering">
+    <div class="content">
+        <h3>Intelligent Document QA with RAG & Memory</h3>
+        <p>
+            Built an AI assistant for PDF document analysis using a Retrieval-Augmented Generation (RAG) pipeline. 
+            <a href="https://huggingface.co/spaces/anwaritos/Intelligent_Document_Question_Answering_with_RAG_and_Memory" class="try-button" target="_blank">Try It Here</a>.
+        </p>
     </div>
+</div>
     
     <div class="card project-card">
         <img src="./assets/xray.jpg" alt="Pneumonia Classification">
