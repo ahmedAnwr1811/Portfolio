@@ -217,26 +217,88 @@
         </ul>
     </nav>
 
-    <!-- Sections for About, Education, Experience, Projects, Skills, Certifications, and Contact -->
-    <!-- Content remains unchanged -->
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="card">
+            <p>Motivated final-year Computer Science student majoring in Artificial Intelligence at The British University in Egypt. I am passionate about leveraging my skills in Python, machine learning, and web development to solve real-world problems. Actively seeking opportunities in AI, backend development, or data science roles.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="card">
+            <h3>The British University in Egypt</h3>
+            <p>BSc in Computer Science - Major: Artificial Intelligence</p>
+            <p>2021 - Present | Year 4</p>
+            <ul>
+                <li>Relevant coursework: Machine Learning, Deep Learning, Data Analysis, Web Development</li>
+                <li>Activities: Programming Club, University Volunteering</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="card">
+            <h3>Laravel Developer Intern</h3>
+            <p>World Urban Forum (WUF12) - Cairo, Egypt</p>
+            <ul>
+                <li>Developed web applications using Django framework</li>
+                <li>Collaborated with a team to build and maintain dynamic features</li>
+                <li>Participated in IT operations during the international WUF event</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="card project-card">
+            <img src="./assets/xray.jpg" alt="Pneumonia Classification">
+            <div class="content">
+                <h3>Pneumonia Classification using Vision Transformer</h3>
+                <p>Fine-tuned a Vision Transformer (ViT) model to classify chest X-ray images as Normal or Pneumonia.</p>
+            </div>
+        </div>
+        <!-- Add more project cards here -->
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="card">
+                <h3>Languages & Frameworks</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+            <!-- Add more skills here -->
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="card">
+            <ul>
+                <li>Machine Learning - Udemy</li>
+                <li>Deep Learning with TensorFlow - Udemy</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+            <p>Email: <a href="mailto:ahmed.anwer1164@icloud.com">ahmed.anwer1164@icloud.com</a></p>
+            <p>Phone: 01113451761</p>
+            <p>Location: Cairo, Egypt</p>
+        </div>
+    </section>
 
     <footer>
         <p>© 2025 Ahmed Anwar. All rights reserved.</p>
     </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            const topOffset = target.offsetTop; // Scroll to the target
-            window.scrollTo({
-                top: topOffset,
-                behavior: 'smooth'
-            });
-        });
-    });
-    </script>
 </body>
 </html>
