@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Anwar - Portfolio</title>
     <style>
-        /* Reset and Global Styles */
         * {
             margin: 0;
             padding: 0;
@@ -19,7 +18,6 @@
             line-height: 1.7;
         }
 
-        /* Header Styles */
         header {
             background: linear-gradient(135deg, #2c2c2c, #5b21b6);
             color: #ffffff;
@@ -28,25 +26,24 @@
         }
 
         .profile-photo {
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 250px;
             border: 4px solid #a78bfa;
+            margin-bottom: 1rem;
             border-radius: 50%;
             object-fit: cover;
-            margin-bottom: 1rem;
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
         }
 
         header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.85;
         }
 
-        /* Navigation Styles */
         nav {
             background-color: #252525;
             padding: 1rem;
@@ -60,7 +57,7 @@
         }
 
         nav ul li {
-            margin: 0 1.2rem;
+            margin: 0 1.5rem;
         }
 
         nav ul li a {
@@ -74,7 +71,6 @@
             color: #a78bfa;
         }
 
-        /* Section Styles */
         section {
             padding: 3rem 1rem;
             max-width: 1100px;
@@ -83,31 +79,26 @@
 
         section h2 {
             color: #a78bfa;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            border-bottom: 2px solid #5b21b6;
+            border-bottom: 3px solid #5b21b6;
             display: inline-block;
         }
 
         .card {
             background-color: #2d2d2d;
             border-radius: 12px;
-            padding: 1.5rem;
+            padding: 2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .card h3 {
-            color: #a78bfa;
-            margin-bottom: 0.75rem;
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
-        .card p {
-            color: #b0b0b0;
-            line-height: 1.6;
-        }
-
-        /* Project Card Styles */
         .project-card {
             display: flex;
             flex-wrap: wrap;
@@ -125,39 +116,34 @@
             flex: 1;
         }
 
-        /* Skills Grid Styles */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-
-        /* Footer Styles */
         footer {
             background-color: #252525;
             color: #d1d5db;
             text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
+            padding: 2rem;
+            margin-top: 3rem;
         }
 
         footer a {
             color: #a78bfa;
-            text-decoration: none;
         }
 
         footer a:hover {
             text-decoration: underline;
         }
 
-        /* Mobile Styles */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             header p {
-                font-size: 1rem;
+                font-size: 1.1rem;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
             }
 
             nav ul {
@@ -166,7 +152,11 @@
             }
 
             nav ul li {
-                margin: 0.5rem 0;
+                margin: 0.75rem 0;
+            }
+
+            section {
+                padding: 2.5rem 1.5rem;
             }
 
             .project-card {
@@ -174,20 +164,19 @@
             }
 
             .project-card img {
-                max-width: 100%;
+                width: 100%;
+                height: auto;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
-        <img src="./assets/profileAnwarPhoto.jpeg" alt="Ahmed Anwar Profile Photo" class="profile-photo">
+        <img src=".\assets\profileAnwarPhoto.jpeg" alt="Ahmed Anwar Profile Photo" class="profile-photo">
         <h1>Ahmed Anwar</h1>
         <p>Computer Science & AI Student | Passionate about Machine Learning and Web Development</p>
     </header>
 
-    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
@@ -200,57 +189,59 @@
         </ul>
     </nav>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <div class="card">
-            <p>Motivated final-year Computer Science student majoring in Artificial Intelligence at The British University in Egypt.</p>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-        <div class="card">
-            <h3>The British University in Egypt</h3>
-            <p>BSc in Computer Science - Major: Artificial Intelligence</p>
-            <p>2021 - Present | Year 4</p>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="card">
-            <h3>Laravel Developer Intern</h3>
-            <p>World Urban Forum (WUF12) - Cairo, Egypt</p>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="card project-card">
-            <img src="./assets/xray.jpg" alt="Pneumonia Classification">
+            <img src=".\assets\xray.jpg" alt="Pneumonia Classification">
             <div class="content">
-                <h3>Pneumonia Classification</h3>
-                <p>Fine-tuned a Vision Transformer (ViT) model to classify chest X-ray images.</p>
+                <h3>Pneumonia Classification using Vision Transformer</h3>
+                <p>Fine-tuned a Vision Transformer (ViT) model to classify chest X-ray images as Normal or Pneumonia, achieving 95% accuracy using the Chest X-ray dataset.</p>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img src=".\assets\summaryMedical.jpg" alt="Medical Summarization">
+            <div class="content">
+                <h3>Medical Research Paper Summarization</h3>
+                <p>Fine-tuned a large language model using LangChain and LoRA to summarize medical research papers, enhancing efficiency in literature reviews.</p>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img src=".\assets\travel.jpg" alt="Travel Planner">
+            <div class="content">
+                <h3>Travel Planner AI Agents</h3>
+                <p>Developed a travel planning system using CrewAI, integrating agents like Travel Advisor, Flight Specialist, and Budget Planner to create personalized itineraries.</p>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img src=".\assets\bitcoin.jpg" alt="Bitcoin Prediction">
+            <div class="content">
+                <h3>Bitcoin Price Prediction</h3>
+                <p>Built an LSTM-CNN hybrid model with TensorFlow for daily Bitcoin price forecasting, integrated into a Django-based web application.</p>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img src=".\assets\bitcoin.jpg" alt="Bitcoin Website">
+            <div class="content">
+                <h3>Bitcoin Predictor Website</h3>
+                <p>Created a full-stack web application using Django, HTML, CSS, and JavaScript to display real-time Bitcoin price predictions.</p>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img src=".\assets\food.jpg" alt="Food Classification">
+            <div class="content">
+                <h3>Food Classification</h3>
+                <p>Developed a CNN model with TensorFlow to classify food images (Pizza vs. Steak) with high accuracy.</p>
+            </div>
+        </div>
+        <div class="card project-card">
+            <img src=".\assets\sentiment.jpg" alt="Sentiment Analysis">
+            <div class="content">
+                <h3>Sentiment Analysis using LLMs</h3>
+                <p>Fine-tuned a language model to perform sentiment analysis on text inputs, achieving robust performance on diverse datasets.</p>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="card">
-                <h3>Languages & Tools</h3>
-                <p>Python, JavaScript, Django, TensorFlow</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <p>© 2025 Ahmed Anwar. All rights reserved.</p>
     </footer>
