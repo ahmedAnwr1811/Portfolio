@@ -5,249 +5,218 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Anwar - Portfolio</title>
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+   /* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    body {
-        background-color: #1a1a1a;
-        color: #e0e0e0;
-        line-height: 1.7;
-    }
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    line-height: 1.7;
+}
 
-    /* Header Styles */
-    header {
-        background: linear-gradient(135deg, #2c2c2c, #5b21b6);
-        color: #ffffff;
-        text-align: center;
-        padding: 4rem 1rem;
-    }
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #2c2c2c, #5b21b6);
+    color: #ffffff;
+    text-align: center;
+    padding: 4rem 1rem;
+}
 
-    .profile-photo {
-        width: 250px;
-        height: 250px;
-        border: 4px solid #a78bfa;
-        margin-bottom: 1rem;
-        border-radius: 50%;
-        object-fit: cover;
-    }
+.profile-photo {
+    width: 250px;
+    height: 250px;
+    border: 4px solid #a78bfa;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.3rem;
+    opacity: 0.85;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #252525;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: #d1d5db;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a78bfa;
+}
+
+/* Section Styles */
+section {
+    padding: 3rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section h2 {
+    color: #a78bfa;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #5b21b6;
+    display: inline-block;
+}
+
+.card {
+    background-color: #2d2d2d;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Project Card Styles */
+.project-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.project-card img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.project-card .content {
+    flex: 1;
+}
+
+/* Small Button for Try It Here */
+.try-button {
+    display: inline-block;
+    padding: 0.2rem 0.5rem; /* Minimal padding */
+    font-size: 0.7rem;      /* Small text */
+    font-weight: 500;
+    color: #ffffff;
+    background: linear-gradient(135deg, #5b21b6, #9333ea);
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.try-button:hover {
+    background: linear-gradient(135deg, #9333ea, #c084fc);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.try-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.try-button:focus {
+    outline: 1px solid #a78bfa;
+    outline-offset: 2px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #252525;
+    color: #d1d5db;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer a {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
     header h1 {
-        font-size: 2.8rem;
-        margin-bottom: 0.5rem;
+        font-size: 2.2rem;
     }
 
     header p {
-        font-size: 1.3rem;
-        opacity: 0.85;
+        font-size: 1.1rem;
     }
 
-    /* Navigation Bar */
-    nav {
-        background-color: #252525;
-        padding: 1rem;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    .profile-photo {
+        width: 120px;
+        height: 120px;
     }
 
     nav ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul li {
-        margin: 0 1.5rem;
+        margin: 0.75rem 0;
     }
 
-    nav ul li a {
-        color: #d1d5db;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-        color: #a78bfa;
-    }
-
-    /* Section Styles */
     section {
-        padding: 3rem 1rem;
-        max-width: 1100px;
-        margin: 0 auto;
+        padding: 2.5rem 1.5rem;
     }
 
-    section h2 {
-        color: #a78bfa;
-        font-size: 2.2rem;
-        margin-bottom: 1.5rem;
-        border-bottom: 3px solid #5b21b6;
-        display: inline-block;
-    }
-
-    .card {
-        background-color: #2d2d2d;
-        border-radius: 12px;
-        padding: 2rem;
-        margin-bottom: 2rem;
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    }
-
-    /* Project Card Styles */
     .project-card {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
+        flex-direction: column;
     }
 
     .project-card img {
         width: 100%;
-        max-width: 250px;
-        border-radius: 10px;
-        object-fit: cover;
+        height: auto;
     }
+}
 
-    .project-card .content {
-        flex: 1;
-    }
-
-    /* Button for Try It Here (Small Version) */
-    .try-button {
-        display: inline-block;
-        padding: 0.2rem 0.5rem; /* Minimal padding for smaller height and width */
-        font-size: 0.7rem; /* Reduced font size */
-        font-weight: 500; /* Slightly less bold text */
-        color: #ffffff;
-        background: linear-gradient(135deg, #5b21b6, #9333ea);
-        border: none;
-        border-radius: 4px; /* Sharper corners for a smaller size */
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-        text-decoration: none;
-        text-align: center;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-
-    .try-button:hover {
-        background: linear-gradient(135deg, #9333ea, #c084fc);
-        transform: translateY(-1px); /* Subtle hover effect */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-
-    .try-button:active {
-        transform: translateY(0px); /* Minimal press effect */
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-    }
-
-    .try-button:focus {
-        outline: 1px solid #a78bfa; /* Very thin focus outline */
-        outline-offset: 2px;
-    }
-
-    /* Skills Grid */
-    .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.5rem;
-    }
-
-    /* Footer */
-    footer {
-        background-color: #252525;
-        color: #d1d5db;
-        text-align: center;
-        padding: 2rem;
-        margin-top: 3rem;
-    }
-
-    footer a {
-        color: #a78bfa;
-        text-decoration: none;
-    }
-
-    footer a:hover {
-        text-decoration: underline;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-        header h1 {
-            font-size: 2.2rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-        }
-
-        .profile-photo {
-            width: 120px;
-            height: 120px;
-        }
-
-        nav ul {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin: 0.75rem 0;
-        }
-
-        section {
-            padding: 2.5rem 1.5rem;
-        }
-
-        .project-card {
-            flex-direction: column;
-        }
-
-        .project-card img {
-            width: 100%;
-            height: auto;
-        }
-    }
-
-    /* Button for Try It Here (Large Version) */
-    .try-button {
-        display: inline-block;
-        padding: 0.8rem 1.8rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-        color: #ffffff;
-        background: linear-gradient(135deg, #5b21b6, #9333ea);
-        border: none;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        text-decoration: none;
-        text-align: center;
-        transition: all 0.3s ease;
-        cursor: pointer;
-    }
-
-    .try-button:hover {
-        background: linear-gradient(135deg, #9333ea, #c084fc);
-        transform: translateY(-3px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    }
-
-    .try-button:active {
-        transform: translateY(2px);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    .try-button:focus {
-        outline: 3px solid #a78bfa;
-        outline-offset: 4px;
-    }
 </style>
 </head>
 <body>
