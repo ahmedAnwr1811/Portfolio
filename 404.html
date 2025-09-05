@@ -198,7 +198,24 @@
                 height: auto;
             }
         }
-    </style>
+        body {
+        scroll-padding-top: 60px; /* Adjust this value based on the height of your nav bar */
+        }
+
+        nav {
+            background-color: #252525;
+            padding: 1rem;
+            position: fixed; /* Change sticky to fixed */
+            top: 0;
+            width: 100%; /* Ensure the nav spans the full width */
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+    header {
+            margin-top: 70px; /* Add margin to push the header content below the fixed nav */
+            }
+</style>
 </head>
 <body>
     <header>
@@ -375,13 +392,17 @@
     <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            const navHeight = document.querySelector('nav').offsetHeight; // Get the height of nav
+            const topOffset = target.offsetTop - navHeight; // Adjust the scroll position
+            window.scrollTo({
+                top: topOffset,
+                behavior: 'smooth'
             });
         });
+    });
     </script>
 </body>
 </html>
