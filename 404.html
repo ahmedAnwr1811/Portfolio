@@ -51,9 +51,6 @@
             background-color: #252525;
             padding: 1rem;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         nav ul {
@@ -122,6 +119,34 @@
 
         .project-card .content {
             flex: 1;
+        }
+
+        .try-button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #ffffff;
+            background: linear-gradient(135deg, #5b21b6, #9333ea);
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .try-button:hover {
+            background: linear-gradient(135deg, #9333ea, #c084fc);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .try-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Skills Grid */
@@ -244,59 +269,80 @@
 
     <!-- Projects Section -->
     <section id="projects">
-        <h2>Projects</h2>
+    <h2>Projects</h2>
 
-        <div class="card project-card">
-            <img src="./assets/cv_analyzer.jpg" alt="AI CV Analyzer">
-            <div class="content">
-                <h3>AI CV Analyzer & Job Fit Scorer</h3>
-                <p>An NLP-powered tool (with LangChain) that parses resumes, extracts skills/experience, matches them to a job description, and scores the fit with actionable improvement tips.</p>
-            </div>
+    <div class="card project-card">
+        <img src="./assets/cv_analyzer.jpg" alt="AI CV Analyzer">
+        <div class="content">
+            <h3>AI CV Analyzer & Job Fit Scorer</h3>
+            <p>An NLP-powered tool (with LangChain) that parses resumes, extracts skills/experience, matches them to a job description, and scores the fit with actionable improvement tips.</p>
         </div>
-        <div class="card project-card">
-            <img src="./assets/vit_food.jpg" alt="Vision Transformer Image Classification">
-            <div class="content">
-                <h3>Vision Transformer (ViT) Image Classification</h3>
-                <p>Fine-tuned a pretrained Vision Transformer (ViT) on the Indian Food Images dataset (19 categories) with an end-to-end pipeline (augmentations, preprocessing).</p>
-            </div>
+    </div>
+
+    <div class="card project-card">
+        <img src="./assets/vit_food.jpg" alt="Vision Transformer Image Classification">
+        <div class="content">
+            <h3>Vision Transformer (ViT) Image Classification</h3>
+            <p>Fine-tuned a pretrained Vision Transformer (ViT) on the Indian Food Images dataset (19 categories) with an end-to-end pipeline (augmentations, preprocessing).</p>
         </div>
-        <div class="card project-card">
-            <img src="./assets/csv_query.jpg" alt="CSV Query Assistant">
-            <div class="content">
-                <h3>CSV Query Assistant (Streamlit + Groq)</h3>
-                <p>Built a Streamlit app for natural-language analysis of CSVs; uses Groq to empower teams with self-serve data exploration. <a href="https://huggingface.co/spaces/anwaritos/Data-Analyzer" target="_blank">Try it here</a>.</p>
-            </div>
+    </div>
+
+    <div class="card project-card">
+        <img src="./assets/csv_query.jpg" alt="CSV Query Assistant">
+        <div class="content">
+            <h3>CSV Query Assistant (Streamlit + Groq)</h3>
+            <p>Built a Streamlit app for natural-language analysis of CSVs; uses Groq to empower teams with self-serve data exploration. <a href="https://huggingface.co/spaces/anwaritos/Data-Analyzer" target="_blank">Try it here</a>.</p>
         </div>
-        <div class="card project-card">
-            <img src="./assets/document_qa.jpg" alt="Intelligent Document Question Answering">
-            <div class="content">
-                <h3>Intelligent Document QA with RAG & Memory</h3>
-                <p>Built an AI assistant for PDF document analysis using a Retrieval-Augmented Generation (RAG) pipeline. <a href="https://huggingface.co/spaces/anwaritos/Intelligent_Document_Question_Answering_with_RAG_and_Memory" target="_blank">Try it here</a>.</p>
-            </div>
+    </div>
+
+    <div class="card project-card">
+        <img src="./assets/document_qa.jpg" alt="Intelligent Document Question Answering">
+        <div class="content">
+            <h3>Intelligent Document QA with RAG & Memory</h3>
+            <p>Built an AI assistant for PDF document analysis using a Retrieval-Augmented Generation (RAG) pipeline. <a href="https://huggingface.co/spaces/anwaritos/Intelligent_Document_Question_Answering_with_RAG_and_Memory" target="_blank">Try it here</a>.</p>
         </div>
-        
-        <div class="card project-card">
-            <img src="./assets/xray.jpg" alt="Pneumonia Classification">
-            <div class="content">
-                <h3>Pneumonia Classification using Vision Transformer</h3>
-                <p>Fine-tuned a Vision Transformer (ViT) model to classify chest X-ray images as Normal or Pneumonia, achieving 95% accuracy using the Chest X-ray dataset.</p>
-            </div>
+    </div>
+    
+    <div class="card project-card">
+        <img src="./assets/xray.jpg" alt="Pneumonia Classification">
+        <div class="content">
+            <h3>Pneumonia Classification using Vision Transformer</h3>
+            <p>Fine-tuned a Vision Transformer (ViT) model to classify chest X-ray images as Normal or Pneumonia, achieving 95% accuracy using the Chest X-ray dataset.</p>
         </div>
-        <div class="card project-card">
-            <img src="./assets/summaryMedical.jpg" alt="Medical Summarization">
-            <div class="content">
-                <h3>Medical Research Paper Summarization</h3>
-                <p>Fine-tuned a large language model using LangChain and LoRA to summarize medical research papers, enhancing efficiency in literature reviews.</p>
-            </div>
+    </div>
+
+    <div class="card project-card">
+        <img src="./assets/summaryMedical.jpg" alt="Medical Summarization">
+        <div class="content">
+            <h3>Medical Research Paper Summarization</h3>
+            <p>Fine-tuned a large language model using LangChain and LoRA to summarize medical research papers, enhancing efficiency in literature reviews.</p>
         </div>
-        <div class="card project-card">
-            <img src="./assets/travel.jpg" alt="Travel Planner">
-            <div class="content">
-                <h3>Travel Planner AI Agents</h3>
-                <p>Developed a travel planning system using CrewAI, integrating agents like Travel Advisor, Flight Specialist, and Budget Planner to create personalized itineraries.</p>
-            </div>
+    </div>
+
+    <div class="card project-card">
+        <img src="./assets/travel.jpg" alt="Travel Planner">
+        <div class="content">
+            <h3>Travel Planner AI Agents</h3>
+            <p>Developed a travel planning system using CrewAI, integrating agents like Travel Advisor, Flight Specialist, and Budget Planner to create personalized itineraries.</p>
         </div>
-    </section>
+    </div>
+
+    <div class="card project-card">
+        <img src="./assets/bitcoin.jpg" alt="Bitcoin Prediction">
+        <div class="content">
+            <h3>Bitcoin Price Prediction</h3>
+            <p>Built an LSTM-CNN hybrid model with TensorFlow for daily Bitcoin price forecasting, integrated into a Django-based web application.</p>
+        </div>
+    </div>
+
+    <div class="card project-card">
+        <img src="./assets/food.jpg" alt="Food Classification">
+        <div class="content">
+            <h3>Food Classification</h3>
+            <p>Developed a CNN model with TensorFlow to classify food images (Pizza vs. Steak) with high accuracy.</p>
+        </div>
+    </div>
+</section>
 
     <!-- Skills Section -->
     <section id="skills">
@@ -330,6 +376,27 @@
                     <li>Google Colab</li>
                 </ul>
             </div>
+            <div class="card">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Team Collaboration</li>
+                    <li>Communication</li>
+                    <li>Self-Learning</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="card">
+            <ul>
+                <li>Machine Learning - Udemy</li>
+                <li>Deep Learning with TensorFlow - Udemy</li>
+                <li>Django Web Development - Udemy</li>
+                <li>Data Analysis - Udemy</li>
+            </ul>
         </div>
     </section>
 
