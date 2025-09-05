@@ -16,7 +16,6 @@
             background-color: #1a1a1a;
             color: #e0e0e0;
             line-height: 1.7;
-            scroll-padding-top: 60px; /* Adjust this value based on the height of your nav bar */
         }
 
         header {
@@ -25,7 +24,6 @@
             text-align: center;
             padding: 4rem 1rem;
             position: relative;
-            margin-top: 70px; /* Add margin to push the header content below the fixed nav */
         }
 
         .profile-photo {
@@ -49,10 +47,6 @@
         nav {
             background-color: #252525;
             padding: 1rem;
-            position: fixed; /* Ensure the nav stays fixed at the top */
-            top: 0;
-            width: 100%; /* Ensure the nav spans the full width */
-            z-index: 100;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
@@ -102,7 +96,7 @@
         }
 
         .card:hover {
-             transform: translateY(-8px);
+            transform: translateY(-8px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
         }
 
@@ -199,10 +193,6 @@
             .project-card img {
                 width: 100%;
                 height: auto;
-            }
-
-            body {
-                scroll-padding-top: 0; /* Reset scroll padding for smaller screens */
             }
         }
 </style>
